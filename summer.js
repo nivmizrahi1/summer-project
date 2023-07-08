@@ -1,10 +1,11 @@
 function checkEnglish(txt) {
     for (let i = 0; i <= txt.length; i++) {
-        if (!(txt.charAt(i) >= "a" && txt.charAt(i) >= "z"))
+        if (!(txt.charAt(i) >= "a" && txt.charAt(i) <= "z"))
             return false;
     }
     return true;
 }
+
 
 
 function clickBtn()
@@ -25,10 +26,10 @@ function clickBtn()
         return false;
     }
     //// שם משתמש חייב להיות באנגלית  //////// לבדוק !!!!!!!! 
-    function checkEnglishLetters(str) {
-        var regex = /^[A-Za-z]+/$;
-        return regex.test(str);
-      }
+    ////function checkEnglishLetters(str) {
+        ///var regex = /^[A-Za-z]+/$;
+       /// return regex.test(str);
+     // }
 //// שם משתמש מינימום 4 תווים 
 const username=document.getElementById("username").value;
 if (username.length<4) {
@@ -56,15 +57,17 @@ if (age<18||age>65) {
 //// מינימום 6 תווים לסיסמא 
 const password = document.getElementById("password").value;
 if (password.length<6) {
-    alert ("חייב מינמום 6 תווים לסיסמא ")
+    alert ("סיסמא חייבת להכיל 6 תווים ")
     return false; 
 }
+//// סיסמא 1 חייבת להיות תואמת ל 2 
 const password2 =document.getElementById ("password2").value;
 if (password2!=password) {
     alert ("שגיאה");
     return false;
 }
 
+//// סיסמא חייבת להכיל אותיות ומספרים 
 
 
 
