@@ -54,12 +54,14 @@ if (age<18||age>65) {
     alert ("חייב מתחת לגיל 18 או מעיל 65 ");
     return false;
 }
-//// מינימום 6 תווים לסיסמא 
+////   מינימום 6 תווים לסיסמא ואותיות ומספרים 
 const password = document.getElementById("password").value;
-if (password.length<6) {
-    alert ("סיסמא חייבת להכיל 6 תווים ")
+
+if (password.length < 6 || !(/[a-zA-Z]/.test(password)) || !(/[0-9]/.test(password))) {
+    alert("סיסמא חייבת להכיל לפחות 6 תווים, המכילים אותיות ומספרים");
     return false; 
 }
+
 //// סיסמא 1 חייבת להיות תואמת ל 2 
 const password2 =document.getElementById ("password2").value;
 if (password2!=password) {
@@ -67,7 +69,6 @@ if (password2!=password) {
     return false;
 }
 
-//// סיסמא חייבת להכיל אותיות ומספרים 
 
 
 
