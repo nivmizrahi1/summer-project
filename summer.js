@@ -25,7 +25,14 @@ function clickBtn()
         alert("אסור יותר משטורדל אחד");
         return false;
     }
+    ////////
+    const regisered= [
+
+    ];
    
+   if (regisered.indexOf(username>-1)){
+    alert ('please choose another name');
+   }
 //// שם משתמש מינימום 4 תווים 
 const username=document.getElementById("username").value;
 if (username.length<4) {
