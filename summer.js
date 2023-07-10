@@ -25,11 +25,7 @@ function clickBtn()
         alert("אסור יותר משטורדל אחד");
         return false;
     }
-    //// שם משתמש חייב להיות באנגלית  //////// לבדוק !!!!!!!! 
-    ////function checkEnglishLetters(str) {
-        ///var regex = /^[A-Za-z]+/$;
-       /// return regex.test(str);
-     // }
+   
 //// שם משתמש מינימום 4 תווים 
 const username=document.getElementById("username").value;
 if (username.length<4) {
