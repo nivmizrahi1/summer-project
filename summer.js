@@ -77,13 +77,6 @@ if (password2!=password) {
 
 
 
-
-
-
-
-
-
-
 }
 
 
