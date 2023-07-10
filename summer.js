@@ -11,7 +11,7 @@ function checkEnglish(txt) {
 function clickBtn()
 // אימות איימל ע"פ נקודה ושטרודל
 {
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("email").value; //// == -1 זה אומר שהשטרולד לא נמצא 
     if (email.indexOf("@") == -1) {
         alert("הכנס אימייל תקין ");
     }
@@ -66,7 +66,7 @@ if (password.length < 6 || !(/[a-zA-Z]/.test(password)) || !(/[0-9]/.test(passwo
 const password2 =document.getElementById ("password2").value;
 if (password2!=password) {
     alert ("שגיאה");
-    return false;
+    return false; 
 }
 
 
