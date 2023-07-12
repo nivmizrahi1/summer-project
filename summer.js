@@ -82,13 +82,10 @@ function clickBtn()
             age: age
 
         })
+        var jason = JSON.stringify(users);
+        localStorage.setItem("data" , jason);
+
     }
-
-
-
-
-
-
 }
 
 
