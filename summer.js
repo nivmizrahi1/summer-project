@@ -13,7 +13,7 @@ function clickBtn()
 // אימות איימל ע"פ נקודה ושטרודל
 {
     const username = document.getElementById("username").value;
-    const testusername = users.find(function (n) {
+    const testusername = users.some(function (n) {
         return username == n.username
     })
 
@@ -37,7 +37,7 @@ function clickBtn()
 
 
     if (username.length < 4 || testusername == true) {
-        alert("חייב מינימום 4 תווים");
+        alert(" אסור משתמש קיים פעמיים וחייב מינימום 4 תווים");
         return false;
     }
     //// שם פרטי פחות משתי אותיות לא מתקבל 
