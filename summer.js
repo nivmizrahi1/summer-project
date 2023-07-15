@@ -1,4 +1,5 @@
 const users = [];
+
 function checkEnglish(txt) {
     for (let i = 0; i <= txt.length; i++) {
         if (!(txt.charAt(i) >= "A" && txt.charAt(i) <= "z"))
@@ -83,7 +84,7 @@ function clickBtn()
 
         })
         var jason = JSON.stringify(users);
-        localStorage.setItem("data" , jason);
+        localStorage.setItem("data", jason);
 
     }
 }
