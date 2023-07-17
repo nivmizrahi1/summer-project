@@ -1,11 +1,22 @@
 const users = JSON.parse(localStorage.getItem('data')) || []; //// קישור בין הלוקאל לדף החדש 
-const username= document.getElementById ('username').value;
-const password= document.getElementById('password').value;
-if (indexof (username)!=indexof (password)) {
-    alert ("there is a problem");
-}
-if (index == -1 || password != users[index].password || chance < 2) {
-    alert("Wrong username or password!") };
+
+document.getElementById('signin').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    const user = users.find(function (item) {
+        return item.username == username && item.password == password;
+    });
+    if (user) {
+        alert('logged in');
+    } else {
+        alert('wrong');
+    }
+
+
+});
 
 
 
@@ -23,3 +34,4 @@ var user={
 }
 users.push(user);
 localStorage.setItem ('users', json.stringify(users));
+*/
