@@ -21,17 +21,9 @@ document.getElementById('signin').addEventListener('click', function (e) {
 
 
 
-
-/*
-const regiseredUsernames= users.map (u=>u.username);
-const username= document.getElementById ('username').ariaValueMax;
-if (regiseredUsernames.indexOf(username)>-1) {
-    alert ('please choose another username'); 
-}
-var user={
-    username:'dfsfd' , 
-    password: 'asdasd'
-}
-users.push(user);
-localStorage.setItem ('users', json.stringify(users));
-*/
+////9 לשים את השם של קובץ HTML ו JS  
+////10 להגדיר את הניווט בין הדפים. הניווט יעבוד כך: בדף ההרשמה אחרי שעבר בהצלחה הוא מעביר אותנו ישר ללוג אין
+///// ברגע שהלוג אין בוצע בהצלחה ומצאתי את המשתמש מנווטים אותנו למסך הבית  פקודה לוקיישן וכך עובר לדף לוגין 
+//// ברגע שהלכנו לדף הבית כותרת אייץ אחד הלו ניב למשל ומתחת גריד 
+/// בדף הבית צריך גריד שלוש על שלוש שאני לוקח מהבוטסטראפ יש את הקוד מובנה להעתיק . לקחת את הלינק ממה שיעקב מצרף. 
+////12 מימוש- טוטאל שעות . 
