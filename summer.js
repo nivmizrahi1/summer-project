@@ -87,6 +87,12 @@ function clickBtn()
         localStorage.setItem("data", jason);
 
     }
+    if (users) {
+        window.location.href='summer2.html';
+    } else {
+        alert('wrong');
+    }
+
 }
 
 

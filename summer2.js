@@ -10,13 +10,14 @@ document.getElementById('signin').addEventListener('click', function (e) {
         return item.username == username && item.password == password;
     });
     if (user) {
-        window.location.href='summer.html3';
+        window.location.href='summer3.html';
     } else {
         alert('wrong');
     }
 
 
 });
+
 //////// בשורה שלוש עשרה ללמוד את ווינדו 
 
 
@@ -29,4 +30,4 @@ document.getElementById('signin').addEventListener('click', function (e) {
 ///// ברגע שהלוג אין בוצע בהצלחה ומצאתי את המשתמש מנווטים אותנו למסך הבית  פקודה לוקיישן וכך עובר לדף לוגין 
 //// ברגע שהלכנו לדף הבית כותרת אייץ אחד הלו ניב למשל ומתחת גריד 
 /// בדף הבית צריך גריד שלוש על שלוש שאני לוקח מהבוטסטראפ יש את הקוד מובנה להעתיק . לקחת את הלינק ממה שיעקב מצרף. 
-////12 מימוש- טוטאל שעות . 
+////12 מימוש- טוטאל שעות .
