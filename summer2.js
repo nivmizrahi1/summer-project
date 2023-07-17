@@ -1,7 +1,7 @@
 const users = JSON.parse(localStorage.getItem('data')) || []; //// קישור בין הלוקאל לדף החדש 
 
 document.getElementById('signin').addEventListener('click', function (e) {
-    e.preventDefault();
+    e.preventDefault(); //// מבטל את ההתנהגות של HTML 
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
