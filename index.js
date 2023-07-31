@@ -1,2 +1,2 @@
-const name = window.localStorage.getItem('currentUser');
-document.getElementById('name').innerHTML = 'שלום ' + name;
+const userName = window.localStorage.getItem('currentUser');
+document.getElementById('name').innerHTML = 'שלום ' + userName;
