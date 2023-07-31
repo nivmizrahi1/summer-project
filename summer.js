@@ -88,7 +88,7 @@ function clickBtn()
 
     }
     if (users) {
-        window.location.href='summer2.html';
+        window.location.href = 'index.html';
     } else {
         alert('wrong');
     }
