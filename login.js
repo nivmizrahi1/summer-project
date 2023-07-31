@@ -10,7 +10,7 @@ document.getElementById('signin').addEventListener('click', function (e) {
         return item.username == username && item.password == password;
     });
     if (user) {
-
+        window.localStorage.setItem('currentUser', user.name);
         window.localStorage.setItem('remember', document.getElementById('rememberme').checked);
         window.location.href = 'index.html';
     } else {
