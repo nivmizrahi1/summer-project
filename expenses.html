@@ -6,17 +6,19 @@
     <title>Document</title>
 </head>
 <body>
+    
     <h1>expenses</h1> 
     <label>date :<input id="expenses_date" type="date"></label>
     <br> <br>
-    <select>
-        <option id="expenses_taxi">taxi
-        <option id="expenses_food">food
-        <option id="expenses_clothes">clothes
+    <select id="typeofexpeneses">
+        <option id="expenses_taxi" value="taxi">taxi
+        <option id="expenses_food" value="food">food
+        <option id="expenses_clothes" value="clothes">clothes
     </select>
     <br>
     <label>סך ההוצאות :<input id="SumExpenses" type="sum"></label>
     <br>
-    <button id="send">send</button>
+    <button id="send" onclick="details()">send</button>
+    <script src="expenses.js"></script>
 </body>
 </html>

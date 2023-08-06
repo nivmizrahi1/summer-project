@@ -88,6 +88,7 @@ function clickBtn()
 
     }
     if (users) {
+        window.localStorage.setItem('currentUser', username);
         window.location.href = 'index.html';
     } else {
         alert('wrong');
