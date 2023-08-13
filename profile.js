@@ -1,12 +1,3 @@
-const users = JSON.parse(window.localStorage.getItem("data")) || [];
-
-function checkEnglish(txt) {
-    for (let i = 0; i <= txt.length; i++) {
-        if (!(txt.charAt(i) >= "A" && txt.charAt(i) <= "z"))
-            return false;
-    }
-    return true;
-}
 
 
 
@@ -34,13 +25,6 @@ function clickBtn()
         return false;
     }
 
-    //// שם משתמש מינימום 4 תווים 
-
-
-    if (username.length < 4 || testusername == true) {
-        alert(" אסור משתמש קיים פעמיים וחייב מינימום 4 תווים");
-        return false;
-    }
     //// שם פרטי פחות משתי אותיות לא מתקבל 
     const name = document.getElementById("name").value;
     if (name.length < 2) {

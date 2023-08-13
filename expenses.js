@@ -1,40 +1,20 @@
-const userName = window.localStorage.getItem('currentUser');
-var expenses = JSON.parse(window.localStorage.getItem(userName)) || {
-    taxi: null,
-    food: null,
-    clothes: null
-};
+const USER_NAME = window.localStorage.getItem('currentUser');
+var expenses = JSON.parse(window.localStorage.getItem(USER_NAME + 'expenses')) || [];
 
-function calculateTotalExpenses(expenses) {
-    const totalExpenses = Object.values(expenses).reduce((total, expense) => {
-        return total + (expense || 0);
-    }, 0);
-    return totalExpenses;
-}
+function details(e) {
+    e.preventDefault();
+    let typeofexpense = document.getElementById("types_expenses").value;
+    var money = Number(document.getElementById("sum").value);
 
-const expense= { 
-sum:money ,
-type: typeofexpense,
-date: document.getElementById('expenses_date').value
-
-}
-function details() {
-    let typeofexpense = document.getElementById("typeofexpeneses").value;
-    var money = Number(document.getElementById("SumExpenses").value);
-    
-    if (typeofexpense === "taxi") {
-        expenses.taxi = (expenses.taxi || 0) + money;
-    } else if (typeofexpense === "food") {
-        expenses.food = (expenses.food || 0) + money;
-    } else {
-        expenses.clothes = (expenses.clothes || 0) + money;  
+    const expense = {
+        sum: money,
+        type: typeofexpense,
+        date: document.getElementById('expenses_date').value
     }
-    
-    console.log(expenses);
-    
+
+    expenses.push(expense);
     var jsonobj = JSON.stringify(expenses);
-    window.localStorage.setItem(userName, jsonobj);
-    
-    const totalExpenses = calculateTotalExpenses(expenses);
-    console.log("Total Expenses:", totalExpenses);
+    window.localStorage.setItem(USER_NAME + 'expenses', jsonobj);
+
+
 }
