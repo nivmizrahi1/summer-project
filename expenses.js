@@ -12,6 +12,12 @@ function calculateTotalExpenses(expenses) {
     return totalExpenses;
 }
 
+const expense= { 
+sum:money ,
+type: typeofexpense,
+date: document.getElementById('expenses_date').value
+
+}
 function details() {
     let typeofexpense = document.getElementById("typeofexpeneses").value;
     var money = Number(document.getElementById("SumExpenses").value);
@@ -21,7 +27,7 @@ function details() {
     } else if (typeofexpense === "food") {
         expenses.food = (expenses.food || 0) + money;
     } else {
-        expenses.clothes = (expenses.clothes || 0) + money;
+        expenses.clothes = (expenses.clothes || 0) + money;  
     }
     
     console.log(expenses);
