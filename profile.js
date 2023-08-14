@@ -1,20 +1,20 @@
 const USER_NAME = window.localStorage.getItem('currentUser'); //// להחזיר את השם - מי מחובר כרגע לאתר 
-console.log (USER_NAME);
-var data= JSON.parse(localStorage.getItem('data')) || []; //// מביא את הנתונים של מי שרשום לאתר  
-var expenses = JSON.parse(window.localStorage.getItem(USER_NAME + 'expenses')) || []; 
+console.log(USER_NAME);
+var data = JSON.parse(localStorage.getItem('data')) || []; //// מביא את הנתונים של מי שרשום לאתר  
+var expenses = JSON.parse(window.localStorage.getItem(USER_NAME + 'expenses')) || [];
 console.log(data);
-var index=data.findIndex(function(s){ //// הפונקציה פיינד אינדקס מקבלת משתנה יוזר ניים שווה למשתמש שמחובר כרגע לאתר. שזה שווה למערך של הדאטה. 
-    return USER_NAME==s.username
-}) 
-console.log (index);
-document.getElementById("email").value =  data[index].email
+var index = data.findIndex(function (s) { //// הפונקציה פיינד אינדקס מקבלת משתנה יוזר ניים שווה למשתמש שמחובר כרגע לאתר. שזה שווה למערך של הדאטה. 
+    return USER_NAME == s.username
+})
+console.log(index);
+document.getElementById("email").value = data[index].email
 document.getElementById("name").value = data[index].name
 document.getElementById("last name").value = data[index].lastname
 document.getElementById("age").value = data[index].age
-function clickBtn(){
+function clickBtn() {
 
 
-// אימות איימל ע"פ נקודה ושטרודל
+    // אימות איימל ע"פ נקודה ושטרודל
 
 
     let email = document.getElementById("email").value; //// == -1 זה אומר שהשטרולד לא נמצא 
@@ -51,14 +51,18 @@ function clickBtn(){
         return false;
     }
     else {
-       data[index].email=email
-       data[index].name=name
-       data[index].lastname=familyname
-       data[index].age=age
-       console.log(data[index]);
+        data[index].email = email
+        data[index].name = name
+        data[index].lastname = familyname
+        data[index].age = age
+        console.log(data[index]);
         var jason = JSON.stringify(data);
         localStorage.setItem("data", jason);
+        document.getElementById('feedback').classList.remove('invisible');
 
+        setTimeout(function () {
+            document.getElementById('feedback').classList.add('invisible');
+        }, 3000);
     }
 
 }
