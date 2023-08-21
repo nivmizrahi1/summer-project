@@ -5,7 +5,7 @@ var expenses = JSON.parse(window.localStorage.getItem(USER_NAME + 'expenses')) |
 console.log(data);
 var index = data.findIndex(function (s) { //// הפונקציה פיינד אינדקס מקבלת משתנה יוזר ניים שווה למשתמש שמחובר כרגע לאתר. שזה שווה למערך של הדאטה. 
     return USER_NAME == s.username
-})
+});
 console.log(index);
 document.getElementById("email").value = data[index].email
 document.getElementById("name").value = data[index].name

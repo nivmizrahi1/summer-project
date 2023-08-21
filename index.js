@@ -28,4 +28,10 @@ console.log(shifts);
 
 document.getElementById('totalHours').innerHTML = 'Total ' + shifts.reduce(function (acc, curr) {
     return acc + curr.totalHours;
-}, 0)
+}, 0);
+
+/* Expenses management */
+const expenses = JSON.parse(localStorage.getItem(userName + 'expenses'));
+document.getElementById('totalExpenses').innerHTML = 'Total ' + expenses.reduce(function (acc, curr) {
+    return acc + curr.sum;
+}, 0);
